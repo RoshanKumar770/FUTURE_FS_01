@@ -72,9 +72,9 @@ function Contact() {
 
         <div style={{ marginTop: "4rem", display: "flex", gap: "2rem", flexWrap: "wrap" }}>
           {[
-            { label: "GitHub", href: "https://github.com/yourusername" },
-            { label: "LinkedIn", href: "https://linkedin.com/in/yourusername" },
-            { label: "Email", href: "mailto:roshan@example.com" },
+            { label: "GitHub", href: "https://github.com/RoshanKumar770" },
+            { label: "LinkedIn", href: "https://linkedin.com/in/roshandevops" },
+            { label: "Email", href: "mailto:roshankumar81624@gmail.com" },
           ].map(({ label, href }) => (
             <a key={label} href={href} target="_blank" rel="noreferrer" style={{
               fontFamily: "var(--font-mono)", fontSize: "0.72rem",
