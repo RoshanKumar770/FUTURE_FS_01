@@ -14,33 +14,25 @@ const SKILLS = [
 ];
 
 const CATEGORY_COLORS = {
-  Cloud: "#ffdd57",
-  DevOps: "#00ff87",
-  Systems: "#0066ff",
-  Dev: "#ff6b9d",
-  Data: "#a78bfa",
+  Cloud: "#ffdd57", DevOps: "#00ff87", Systems: "#0066ff", Dev: "#ff6b9d", Data: "#a78bfa",
 };
 
 function Skills() {
   return (
     <section id="skills" className="section-fade" style={{
-      padding: "7rem 2.5rem",
+      padding: "5rem 1.5rem",
       background: "var(--surface)",
-      borderTop: "1px solid var(--border)",
-      borderBottom: "1px solid var(--border)",
+      borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)",
     }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <p className="tag" style={{ marginBottom: "1rem" }}>02 / Skills</p>
         <div className="accent-line" />
         <h2 style={{
           fontFamily: "var(--font-display)", fontWeight: 700,
-          fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em",
-          marginBottom: "3rem",
-        }}>
-          Tech Stack
-        </h2>
+          fontSize: "clamp(1.8rem, 4vw, 3rem)", letterSpacing: "-0.02em", marginBottom: "3rem",
+        }}>Tech Stack</h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1.5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "1rem" }}>
           {SKILLS.map(({ name, level, category }) => (
             <div key={name} style={{
               background: "var(--bg)", border: "1px solid var(--border)",
@@ -50,20 +42,15 @@ function Skills() {
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.82rem", color: "var(--text)" }}>{name}</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.82rem" }}>{name}</span>
                 <span style={{
-                  fontFamily: "var(--font-mono)", fontSize: "0.62rem",
-                  color: CATEGORY_COLORS[category],
-                  border: `1px solid ${CATEGORY_COLORS[category]}`,
+                  fontFamily: "var(--font-mono)", fontSize: "0.58rem",
+                  color: CATEGORY_COLORS[category], border: `1px solid ${CATEGORY_COLORS[category]}`,
                   padding: "0.15rem 0.5rem", textTransform: "uppercase", letterSpacing: "0.08em",
                 }}>{category}</span>
               </div>
-              <div style={{ height: 3, background: "var(--border)", position: "relative" }}>
-                <div style={{
-                  height: "100%", width: `${level}%`,
-                  background: CATEGORY_COLORS[category],
-                  transition: "width 1s ease",
-                }} />
+              <div style={{ height: 3, background: "var(--border)" }}>
+                <div style={{ height: "100%", width: `${level}%`, background: CATEGORY_COLORS[category] }} />
               </div>
               <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", color: "var(--muted)", marginTop: "0.4rem", textAlign: "right" }}>{level}%</p>
             </div>

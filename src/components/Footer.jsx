@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer style={{
       background: "var(--surface)", borderTop: "1px solid var(--border)",
-      padding: "2rem 2.5rem",
+      padding: "2rem 1.5rem",
       display: "flex", justifyContent: "space-between", alignItems: "center",
       flexWrap: "wrap", gap: "1rem",
     }}>
